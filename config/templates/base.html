@@ -1,0 +1,19 @@
+{% load static %}
+{% load draw_menu %}
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Тест меню</title>
+    <link rel="stylesheet" href="{% static 'tree_menu/menu.css' %}">
+</head>
+<body>
+
+<h1>Тест меню</h1>
+
+{% draw_menu 'main_menu' %}
+
+{% block content %}{% endblock %}
+
+</body>
+</html>

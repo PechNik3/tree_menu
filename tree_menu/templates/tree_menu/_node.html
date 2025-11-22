@@ -1,0 +1,17 @@
+{% with item=node.obj %}
+  <li class="tm-item{% if node.active %} active{% endif %}{% if node.expanded %} expanded{% endif %}">
+    {% if node.url %}
+      <a href="{{ node.url }}">{{ item.title }}</a>
+    {% else %}
+      <span class="no-link">{{ item.title }}</span>
+    {% endif %}
+
+    {% if node.children %}
+      <ul class="tm-children" {% if not node.expanded %}style="display:none"{% endif %}>
+        {% for child in node.children %}
+          {% include "tree_menu/_node.html" with node=child %}
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </li>
+{% endwith %}

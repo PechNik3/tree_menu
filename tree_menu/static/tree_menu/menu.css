@@ -1,0 +1,4 @@
+.tree-menu ul { list-style: none; margin: 0; padding-left: 1em; }
+.tree-menu .tm-item { margin: 0.2em 0; }
+.tree-menu .tm-item.active > a { font-weight: 700; }
+.tree-menu .tm-item .tm-children { margin-left: 0.8em; }

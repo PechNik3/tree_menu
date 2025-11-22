@@ -1,0 +1,11 @@
+{# Меню рендерится рекурсивно #}
+{% load static %}
+<nav class="tree-menu {{ menu_name }}">
+  <ul class="tm-root">
+    {% for node in roots %}
+      {% include "tree_menu/_node.html" with node=node %}
+    {% empty %}
+      <!-- пусто -->
+    {% endfor %}
+  </ul>
+</nav>
